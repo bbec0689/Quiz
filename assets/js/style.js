@@ -121,7 +121,7 @@ var message =
 'You ran out of time! Reload the page to try again.';
 
 function countdown() {
-    var timeLeft = 3;
+    var timeLeft = 100;
 
     // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval(function () {
