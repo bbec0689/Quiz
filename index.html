@@ -11,22 +11,28 @@
 </head>
 
 <body>
-    <div class="container">
-        <div id="question-container" class="hide">
-            <div id="question"></div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+    <div id="holder">
+        <div class="container">
+            <div id="question-container" class="hide">
+                <div id="question"></div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn" id="a" onclick="checkAnswer">Answer 1</button>
+                    <button class="btn" id="b" onclick="checkAnswer">Answer 2</button>
+                    <button class="btn" id="c" onclick="checkAnswer">Answer 3</button>
+                    <button class="btn" id="d" onclick="checkAnswer">Answer 4</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Start</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
             </div>
         </div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <h2 id="countdown"></h2>
-            <p class="main"></p>
-            <button id="next-btn" class="next-btn btn hide">Next</button>
-        </div>
+    </div>
+    <div id="scoreContainer" style="display: none;"></div>
+    <div class="content">
+        <h2>Time Remaining:</h2>
+        <h2 id="countdown"></h2>
+        <p class="main"></p>
     </div>
 </body>
 

@@ -3,12 +3,11 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const scoreDiv = document.getElementById("scoreContainer");
 
 var timerEl = document.getElementById('countdown')
-
-var message =
-'You ran out of time! Reload the page to try again.';
-var words = message.split(' ');
+var mainEl = document.getElementById('main');
+var startBtn = document.getElementById('start');
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -118,4 +117,30 @@ const questions = [
     }
 ]
 
-startBtn.onclick = countdown;
+var message =
+'You ran out of time! Reload the page to try again.';
+
+function countdown() {
+    var timeLeft = 3;
+
+    // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+    var timeInterval = setInterval(function () {
+        if (timeLeft > 0) {
+            timerEl.innerText = timeLeft;
+            timeLeft = timeLeft - 1
+        }
+        else if (timeLeft === 0) {
+            clearInterval;
+            timerEl.innerText = "";
+            displayMessage()
+        }
+    }, 1000);
+}
+
+function displayMessage() {
+    var wordCount = 0;
+    clearInterval;
+    
+}
+
+startButton.onclick = countdown;
