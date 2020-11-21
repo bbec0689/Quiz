@@ -9,6 +9,9 @@ var timerEl = document.getElementById('countdown')
 var mainEl = document.getElementById('main');
 var startBtn = document.getElementById('start');
 
+var playerScore = 100;
+console.log
+
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
@@ -80,7 +83,7 @@ function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
-
+// Questions and answers 
 const questions = [
     {
         question: 'How do you create a function in JavaScript?',
@@ -117,11 +120,8 @@ const questions = [
     }
 ]
 
-var message =
-'You ran out of time! Reload the page to try again.';
-
 function countdown() {
-    var timeLeft = 100;
+    var timeLeft = 2;
 
     // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval(function () {
@@ -137,10 +137,11 @@ function countdown() {
     }, 1000);
 }
 
-function displayMessage() {
-    var wordCount = 0;
-    clearInterval;
-    
+function displayMessage(message) {
+    var message = prompt("Out of time, please enter your name.", "Enter Name");
+    if (message != null)
+        document.getElementById("prompt").innerHTML = 
+        "Hello " + message + "! if you would like to try again press the retry button!";
 }
 
 startButton.onclick = countdown;
