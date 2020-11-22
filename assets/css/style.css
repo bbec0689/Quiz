@@ -42,6 +42,34 @@ body.wrong {
     font-size: 24px;
 }
 
+form {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 50vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.box {
+    outline: black;
+    padding: 2px;
+    width: 100%;
+    font-size: 2.2rem;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
 .container {
     width: 800px;
     max-width: 80%;

@@ -10,7 +10,7 @@ var mainEl = document.getElementById('main');
 var startBtn = document.getElementById('start');
 
 var playerScore = 100;
-console.log
+
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -132,16 +132,14 @@ function countdown() {
         else if (timeLeft === 0) {
             clearInterval;
             timerEl.innerText = "";
-            displayMessage()
+            displayForm()
         }
     }, 1000);
 }
 
-function displayMessage(message) {
-    var message = prompt("Out of time, please enter your name.", "Enter Name");
-    if (message != null)
-        document.getElementById("prompt").innerHTML = 
-        "Hello " + message + "! if you would like to try again press the retry button!";
+function displayForm() {
+    window.location.href = "./secondary.html"
+
 }
 
 startButton.onclick = countdown;
