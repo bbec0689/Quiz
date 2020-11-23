@@ -8,7 +8,7 @@
     --hue-wrong: 0;
     --hue-correct: 145;
 }
-
+/* body styling */
 body {
     --hue: var(--hue-neutral);
     background-color: hsl(var(--hue), 100%, 20%);
@@ -32,7 +32,7 @@ body.correct {
 body.wrong {
     --hue: var(--hue-wrong);
 }
-
+/* timer */
 #countdown {
     font-size: large;
     font-weight: bold;
@@ -52,7 +52,7 @@ p {
     font-weight: bold;
 }
 
-
+/* high scores page */
 .highscores {
     position: absolute;
     top: 10px;
@@ -74,7 +74,7 @@ p {
 input {
     text-align: center;
 }
-
+/* form styling */
 form {
     padding: 0;
     margin: 0;
@@ -113,7 +113,7 @@ form {
     padding: 10px;
     box-shadow: 0 0 10px 2px;
 }
-
+/* button styling */
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(1, auto);
@@ -140,7 +140,6 @@ form {
 btn.correct{
     --hue: var(--hue-correct);
     color: black;
-    font-display: ;
 }
 
 btn.wrong {

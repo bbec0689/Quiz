@@ -14,7 +14,7 @@ function subtractTime(){
 
 let shuffledQuestions, currentQuestionIndex;
 let = numCorrect = 5;
-
+// added functionality to start button
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
@@ -28,7 +28,9 @@ function startGame() {
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
 }
+//end of start button styling
 
+//setting up the way qustions will display
 function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
@@ -55,7 +57,7 @@ function resetState() {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
 }
-
+//setting up the way the page reacts when an answer is selected
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
@@ -72,7 +74,7 @@ function selectAnswer(e) {
         window.location.href = "./secondary.html";
     }
 }
-
+//set up functionality for score keeping and local storage
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
@@ -124,9 +126,16 @@ const questions = [
         ]
     }
 ]
+//set up the timer and deduction of time based upon wrong answers
+var timerNumber = document.querySelector("#timer-number")
+var instructions = document.querySelector('.instructions')
+var questionContainer = document.querySelector('#question-container')
+
+var timeLeft = 50;
+var myTimer;
+
 
 function countdown() {
-    var timeLeft = 100;
 
 
     var timeInterval = setInterval(function () {
@@ -139,12 +148,25 @@ function countdown() {
             timerEl.innerText = "";
             displayForm();
         }
-
     }, 1000);
 }
 
 function displayForm() {
     window.location.href = "./secondary.html";
 }
+
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+        element.addEventListener('click', () => {
+            timeLeft = timeLeft - 5
+            myTimer = setInterval(timeLeft)
+        })
+    }
+}
+
 
 startButton.onclick = countdown;
