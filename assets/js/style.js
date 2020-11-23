@@ -3,11 +3,14 @@ const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
-const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
 var startBtn = document.getElementById('start');
+
+function subtractTime(){
+    timerEl
+}
 
 let shuffledQuestions, currentQuestionIndex;
 let = numCorrect = 5;
@@ -23,9 +26,6 @@ function startGame() {
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
-    questionCounter = 0;
-    score = 0;
-    availableQuesions = [...questions];
     setNextQuestion();
 }
 
@@ -128,7 +128,7 @@ const questions = [
 function countdown() {
     var timeLeft = 100;
 
-    // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+
     var timeInterval = setInterval(function () {
         if (timeLeft > 0) {
             timerEl.innerText = timeLeft;
@@ -139,16 +139,12 @@ function countdown() {
             timerEl.innerText = "";
             displayForm();
         }
+
     }, 1000);
 }
 
 function displayForm() {
     window.location.href = "./secondary.html";
 }
-
-incrementScore = num => {
-    score += num;
-    scoreText.innerText = score;
-};
 
 startButton.onclick = countdown;
