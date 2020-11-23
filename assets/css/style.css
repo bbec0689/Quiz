@@ -140,6 +140,7 @@ form {
 btn.correct{
     --hue: var(--hue-correct);
     color: black;
+    font-display: ;
 }
 
 btn.wrong {
