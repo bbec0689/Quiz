@@ -42,6 +42,39 @@ body.wrong {
     font-size: 24px;
 }
 
+h1 {
+    font-size: 28.6px;
+}
+
+p {
+    font-size: 24px;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+.highscores {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: green;
+    border-radius: 5px;
+    border-style: hidden;
+}
+
+.scores {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+input {
+    text-align: center;
+}
+
 form {
     padding: 0;
     margin: 0;
@@ -53,21 +86,23 @@ form {
 }
 
 .form-group {
-    width: 800px;
+    width: 600px;
     max-width: 80%;
     background-color: white;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+    display: grid;
 }
 
 .box {
     outline: black;
     padding: 2px;
     width: 100%;
-    font-size: 2.2rem;
+    font-size: 24px;
     border: 2px solid black;
     border-radius: 12px;
+    margin-bottom: 10px;
 }
 
 .container {

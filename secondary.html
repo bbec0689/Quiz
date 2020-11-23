@@ -9,13 +9,16 @@
 <body>
     <form>
     <div class="form-group">
-            <p id="player-score"> Your Score was:</p>
+            <p>OOPS! you ran out of time!</p>
+            <p class="p2" id="player-score"> Your Score was:</p>
             <br/>
-            <h1>Enter Your Name Here to record your score:</h1>
+            <h1>Enter Your Name Here to record your score</h1>
         <input type="text" name="task-name" class="box" placeholder="Enter Name"/>
-        <p>If you would like to try again press the retry button below:</p>
-        <button onClick="window.location.reload();" class="btn">Retry</button>
+        <input type="submit"  id="mySubmit" class="btn" value="Submit The Form">
+        <p>If you would like to try again press the retry button below</p>
+        <input onclick="window.location.href = './index.html'" value="Retry" class="btn"></input>
     </form>
     </div>
+    <script src="./assets/js/secondary.js"></script>
 </body>
 </html>

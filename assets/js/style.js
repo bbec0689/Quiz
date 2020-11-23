@@ -10,31 +10,32 @@ var mainEl = document.getElementById('main');
 var startBtn = document.getElementById('start');
 
 var playerScore = 100;
-
+var highscore = localStorage.getItem("highscore");
 
 let shuffledQuestions, currentQuestionIndex
 
-startButton.addEventListener('click', startGame)
+
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion()
+    currentQuestionIndex++;
+    setNextQuestion();
 })
 
 function startGame() {
-    startButton.classList.add('hide')
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    questionContainerElement.classList.remove('hide')
-    setNextQuestion()
+    startButton.classList.add('hide');
+    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    questionContainerElement.classList.remove('hide');
+    setNextQuestion();
 }
 
 function setNextQuestion() {
-    resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    resetState();
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
 function showQuestion(question) {
-    questionElement.innerText = question.question
+    questionElement.innerText = question.question;
     question.answers.forEach(answer => {
         const button = document.createElement('button')
         button.innerText = answer.text
@@ -139,7 +140,6 @@ function countdown() {
 
 function displayForm() {
     window.location.href = "./secondary.html"
-
 }
 
 startButton.onclick = countdown;
